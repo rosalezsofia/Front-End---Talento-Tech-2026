@@ -1,0 +1,327 @@
+:root{ 
+    --fondo: #1a1a24;
+    --color-primario: #a78bf9;
+    --color-secundario: #f1f1f1;
+    --text: #e8e8f0;
+    --text-secundario: #888899;
+    --font-family: font-family: 'Space Mono', monospace;
+    --bordes: #2a2a3a;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Syne:wght@800&display=swap');
+
+
+body {
+    background-color: var(--fondo);
+
+}
+
+/*LOGO Y NAV BAR */
+
+header {    
+    border-bottom: 0.5px solid var(--color-secundario);
+}
+
+
+.nav-container{
+    display:flex;
+    background-color: var(--fondo);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: 'Space Mono', monospace;
+
+}
+
+.logo-container {
+    font-family: 'Space Mono', monospace;
+    color:var(--color-secundario);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+span{
+    color: var(--color-primario);
+}
+
+.nav-right{
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    gap: 30px
+}
+.nav-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--fondo);
+    border: 1px solid var(--bordes);
+    border-radius: 8px;
+    padding: 8px 10px;
+}
+
+.nav-search input{
+    background:  var(--fondo);
+    color: var(--color-secundario);
+    outline: none;
+    border: none;
+}
+
+.nav-search:hover{ 
+    border: 1px solid var(--color-primario);
+}
+
+.carrito-btn{
+    background: var(--fondo);
+    border: 1px solid var(--bordes);
+    color: var(--text-secundario);
+    border-radius: 8px;
+    font: var(--font-family);
+    width: 140px;
+    height: 40px;
+}
+
+.carrito-btn:hover{
+    border: 1px solid var(--color-primario);
+}
+
+.nav-search .carrito-btn {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    gap: 50px;
+    margin: 20px;
+    flex-wrap: wrap;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*CATEGORIAS*/
+
+.categorias-container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 30px;
+}
+
+.categorias input{
+    background: var(--fondo);
+    border: 1px solid var(--bordes);
+    color: var(--text-secundario);
+    border-radius: 8px;
+    font: var(--font-family);
+    width: 140px;
+    height: 40px;
+}
+
+.categorias input:hover{ 
+    border: 0.5px solid var(--color-primario);
+    border-radius: 8px;
+}
+
+
+/*HERO*/
+.hero-section{
+    display:flex;
+
+}
+
+.texto-izquierda{
+    background-color: rgb(178, 214, 15);
+    width: 50%;
+}
+
+.texto-izquierda h1{ 
+    font-family: "syne", sans-serif;
+    color: white;
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+.transparent{
+    color: var(--color-primario);
+}
+
+
+
+.productos-destacados{
+    display:flex;
+    justify-content: flex-end;
+    background-color: rgb(36, 134, 214);
+}
+
+.chip-verde{
+    border: 1px solid greenyellow;
+    background: var(--fondo);
+    color: var(--text-secundario);
+    border-radius: 8px;
+    font: var(--font-family);
+    width: 140px;
+    height: 40px;
+
+ }
+
+
+
+/*PRODUCTOS*/
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 57px;
+     margin: 140px;
+  padding: 17px;
+    font-family:  "syne", sans-serif; 
+}
+
+
+.tarjetas {
+    width: 280px;
+    height: 420px;
+    background: #0b0f1f;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+
+.product-image {
+width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #a78bf9, #888899);
+}
+
+.product-image img {
+    width: 400px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+
+.info {
+    padding: 20px;
+    color: white;
+}
+
+.categoria {
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: var(--color-primario);
+    margin-bottom: 10px;
+
+}
+
+.titulo {
+    margin-bottom: 20px;
+    font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.precio {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 28px;
+}
+
+.categoria input{  
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 140px;
+    height: 40px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+}
+
+.comprar{
+    background: var(--fondo);
+    border: 1px solid var(--bordes);
+    color: var(--color-secundario);
+    border-radius: 8px;
+    font: var(--font-family);
+    width: 140px;
+    height: 40px;
+}
+
+.comprar:hover {
+     border: 1px solid var(--color-primario);
+     font-size: 20px;
+}
+
+
+/*COMBOS*/
+
+.combos-desc{
+    display: flex;
+   justify-content: center;
+    color: var(--color-secundario);
+    font-family: "syne", sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+
+}
+
+.transparente{
+text-transform: lowercase;
+    color: transparent; /* relleno transparente */
+    -webkit-text-stroke: 2px #7c5cff; /* borde */
+    letter-spacing: -4px;
+    line-height: 1;
+    margin: 0;
+
+}
+
+.desc{
+   display: flex;
+   justify-content: left;
+   margin: 5px;
+    color: var(--text);
+    font-family: "syne", sans-serif;
+    font-weight: 500;
+    font-size: 30px;  
+}
+
+
+
+.grid-combos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 57px;
+    margin: 140px;
+    padding: 17px;
+    font-family:  "syne", sans-serif; 
+}
+
+
+.tarjetas-combos{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 57px;
+    margin: 140px;
+     padding: 17px;
+    font-family:  "syne", sans-serif; 
+}
+
+.tarjetas{
+        width: 280px;
+    height: 420px;
+    background: #0b0f1f;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
