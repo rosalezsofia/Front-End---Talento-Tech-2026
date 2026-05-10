@@ -10,10 +10,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Syne:wght@800&display=swap');
 
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     background-color: var(--fondo);
-
 }
 
 /*LOGO Y NAV BAR */
@@ -40,7 +43,7 @@ header {
     font-weight: 700;
     letter-spacing: 0.05em;
 }
-span{
+.alley{
     color: var(--color-primario);
 }
 
@@ -63,6 +66,8 @@ span{
 .nav-search input{
     background:  var(--fondo);
     color: var(--color-secundario);
+    font: var(--font-family);
+    font-size: small;
     outline: none;
     border: none;
 }
@@ -93,7 +98,7 @@ span{
     margin: 20px;
     flex-wrap: wrap;
     font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font: var(--font-family);
 }
 
 /*CATEGORIAS*/
@@ -111,7 +116,7 @@ span{
     color: var(--text-secundario);
     border-radius: 8px;
     font: var(--font-family);
-    width: 140px;
+    width: 170px;
     height: 40px;
 }
 
@@ -123,57 +128,99 @@ span{
 
 /*HERO*/
 .hero-section{
-    display:flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
-.texto-izquierda{
-    background-color: rgb(178, 214, 15);
-    width: 50%;
+.video-fondo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    z-index: -1;
 }
 
-.texto-izquierda h1{ 
+.texto{
+    width: 100%;
+    padding: 190px;
+    text-align: center;
+    box-sizing: border-box;   /* evita que el padding rompa el ancho */
+}
+
+
+h1{
     font-family: "syne", sans-serif;
     color: white;
+    font-size: 80px;
+    font-style: normal;
+}
+
+.transparente{
+    color: transparent !important;
+    -webkit-text-stroke: 2px #00F5FF;
     font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(0, 245, 255, 0.4);
+}
+
+
+.desc-titulo{
+    font-family: "syne", sans-serif;
+    color: white;
+    margin: 30px;
+    font-size: 20px;
     font-style: normal;
 }
 
 
-.transparent{
-    color: var(--color-primario);
-}
 
-
-
-.productos-destacados{
-    display:flex;
-    justify-content: flex-end;
+button{
+    width: 150px;
     background-color: rgb(36, 134, 214);
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
-.chip-verde{
-    border: 1px solid greenyellow;
-    background: var(--fondo);
-    color: var(--text-secundario);
-    border-radius: 8px;
-    font: var(--font-family);
-    width: 140px;
-    height: 40px;
 
- }
 
 
 
 /*PRODUCTOS*/
+.titulo-productos-destacados{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bordes);
+    border-radius: 8px;
+    padding: 40px 0;
+}
+
+.titulo-desc{
+    font-size: 40px;
+    text-align: center;
+}
+
+h2{
+    font-size: 20px;
+    color: var(--color-secundario);
+    font-family: "syne", sans-serif;
+    text-align: center;
+}
 
 .grid{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 57px;
-     margin: 140px;
-  padding: 17px;
-    font-family:  "syne", sans-serif; 
+    gap: 40px;
+    margin: 40px 80px;
+    padding: 0;
+    font-family: "syne", sans-serif;
 }
 
 
@@ -190,7 +237,7 @@ span{
 
 
 .product-image {
-width: 100%;
+    width: 100%;
     height: 180px;
     display: flex;
     justify-content: center;
@@ -274,15 +321,6 @@ width: 100%;
 
 }
 
-.transparente{
-text-transform: lowercase;
-    color: transparent; /* relleno transparente */
-    -webkit-text-stroke: 2px #7c5cff; /* borde */
-    letter-spacing: -4px;
-    line-height: 1;
-    margin: 0;
-
-}
 
 .desc{
    display: flex;
