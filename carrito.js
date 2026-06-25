@@ -59,21 +59,14 @@ function mostrarCarrito() {
         `;
     });
 
-    if (total) {
-        total.innerHTML = `
-            Total: $${suma.toLocaleString("es-AR")}
-
-            <br><br>
-
-            <button
-                class="comprar"
-                onclick="realizarCompra()">
-
-                Realizar compra 🛍️
-
-            </button>
-        `;
-    }
+if (total) {
+    total.innerHTML = `
+        <div class="total-contenedor">
+            <p>Total: $${suma.toLocaleString("es-AR")}</p>
+            <button class="comprar" onclick="realizarCompra()">Realizar compra</button>
+        </div>
+    `;
+}
 }
 
 function eliminarProducto(index) {
