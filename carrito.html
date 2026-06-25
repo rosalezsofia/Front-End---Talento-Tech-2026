@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Riddle Alley</title>
+</head>
+
+<body>
+<header class="nav-container">
+    <div class="logo-container" onclick="location.href='index.html'">
+        RIDDLE
+        <span class="alley">ALLEY</span>
+    </div>
+
+    <div class="categorias-container">
+        <div class="categorias">
+            <input
+                type="button"
+                value="Catálogo"
+                onclick="location.href='catalogo.html'">
+        </div>
+
+        <div class="categorias">
+            <input
+                type="button"
+                value="Combos"
+                onclick="location.href='combos.html'">
+        </div>
+
+        <div class="categorias">
+            <input
+                type="button"
+                value="Armamos tu setup"
+                onclick="location.href='index.html#contacto'">
+        </div>
+
+    </div>
+<div class="nav-right">
+        <div class="nav-search">
+            <form role="search">
+                <input
+                    type="search"
+                    placeholder="🔎 Buscar componentes...">
+            </form>
+        </div>
+    <button class="carrito-btn" onclick="location.href='carrito.html'"> 🛒 Carrito <span id="contador-carrito">0</span>
+    </button>
+</div>
+
+<button  class="carrito-btn" onclick="history.back()"> ← Volver</button>
+</header>
+
+
+<div class="titulo-productos-destacados">
+    <h1 class="titulo-desc">
+        Tu carrito 🛒
+    </h1>
+</div>
+
+ 
+<div id="carrito" class="grid-combos"></div>
+
+
+<div id="total" style="text-align:center; margin:40px; color:white; font-size:30px;"></div>
+
+
+<footer class="footer">
+    <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>
+            <strong>Dirección:</strong>
+            Ciudad Autónoma de Buenos Aires
+        </p>
+        <p>
+            <strong>Teléfono:</strong>
+            +54 11 1234 5678
+        </p>
+
+        <p>
+            <strong>Horario:</strong>
+            9:00 - 18:00
+        </p>
+    </div>
+
+    <div class="footer-col">
+        <h4>Mi Cuenta</h4>
+        <a href="#">Home</a>
+
+        <a href="#">Carrito</a>
+    </div>
+
+    <div class="copyright">
+        <p>
+            © 2025 Riddle Alley · Buenos Aires
+        </p>
+    </div>
+</footer>
+<script src="api.js"></script>
+<script src="carrito.js"></script>
+</body>
+</html>
